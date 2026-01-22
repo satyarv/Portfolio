@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 body {
@@ -13,7 +13,6 @@ body {
 /* NAVBAR */
 nav {
   position: fixed;
-  top: 0;
   width: 100%;
   background: #020617;
   padding: 15px 40px;
@@ -23,27 +22,21 @@ nav {
 }
 
 nav ul {
-  display: flex;
   list-style: none;
+  display: flex;
 }
 
 nav ul li a {
   color: white;
-  text-decoration: none;
   margin-left: 20px;
-}
-
-nav ul li a:hover {
-  color: #38bdf8;
+  text-decoration: none;
 }
 
 /* HERO */
 .hero {
   height: 100vh;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding-top: 120px;
 }
 
 .hero span {
@@ -51,22 +44,39 @@ nav ul li a:hover {
 }
 
 .btn {
+  display: inline-block;
   margin-top: 20px;
   padding: 12px 25px;
   background: #38bdf8;
   color: black;
   border-radius: 25px;
   text-decoration: none;
-  transition: transform 0.3s;
-}
-
-.btn:hover {
-  transform: scale(1.1);
 }
 
 /* SECTIONS */
 section {
   padding: 100px 40px;
+}
+
+h2 {
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+/* ABOUT */
+.about-section {
+  max-width: 900px;
+}
+
+.about-box {
+  background: #020617;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.about-box p {
+  margin-bottom: 15px;
+  line-height: 1.7;
 }
 
 /* SKILLS */
@@ -80,35 +90,28 @@ section {
 .skills-grid span {
   background: #1e293b;
   padding: 12px;
-  text-align: center;
   border-radius: 6px;
-  transition: transform 0.3s, background 0.3s;
-}
-
-.skills-grid span:hover {
-  transform: translateY(-5px);
-  background: #38bdf8;
-  color: black;
+  text-align: center;
 }
 
 /* PROJECTS */
 .project-card {
   background: #1e293b;
   padding: 20px;
-  margin-top: 15px;
-  border-radius: 8px;
-  transition: transform 0.3s;
+  margin: 15px 0;
+  border-radius: 10px;
 }
 
-.project-card:hover {
-  transform: translateY(-10px);
+.project-card a {
+  color: #38bdf8;
+  text-decoration: none;
 }
 
 /* SCROLL ANIMATION */
 .reveal {
   opacity: 0;
   transform: translateY(40px);
-  transition: all 0.8s ease;
+  transition: 0.8s;
 }
 
 .reveal.active {
@@ -116,6 +119,7 @@ section {
   transform: translateY(0);
 }
 
+/* FOOTER */
 footer {
   text-align: center;
   background: #020617;
